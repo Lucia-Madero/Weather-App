@@ -96,9 +96,14 @@ function showPosition(position) {
 
 function showTemp(event, element) {
   event.preventDefault();
-  let apiKey = "b8472ba63e135218f57d24b1f32f73fa";
   element = document.querySelector("#search-box");
-  let city = element.value;
+  searchCity(element.value);
+}
+
+function searchCity(city) {
+  let loadCity = document.querySelector("#current-city");
+  loadCity.innerHTML = city;
+  let apiKey = "b8472ba63e135218f57d24b1f32f73fa";
   let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showCity);
 }
@@ -106,7 +111,6 @@ function showTemp(event, element) {
 function restoreCurrent() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-navigator.geolocation.getCurrentPosition(showPosition);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
@@ -116,3 +120,4 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", showTemp);
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", restoreCurrent);
+searchCity("Brussels");
