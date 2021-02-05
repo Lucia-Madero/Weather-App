@@ -24,7 +24,7 @@ body {
   background: #95daf5;
 }
 
-.container {
+.weather-app {
   width: fit-content;
   border: 1px solid #dfe1e5;
   border-radius: 4px;

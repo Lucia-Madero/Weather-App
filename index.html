@@ -19,29 +19,29 @@
     <title>The weather</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <form id ="search-form"> 
-            <input
-            type="text"
-            class="form-control"
-            placeholder="Search city"
-            autocomplete="off"
-            id="search-box"
-          />
-        </div>
-        <div class="col-2">
+    <div class="weather-app">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <form id ="search-form"> 
+              <input
+              type="text"
+              class="form-control"
+              placeholder="Search city"
+             autocomplete="off"
+             id="search-box" />
+           </div>
+          <div class="col-2">
           <input type="submit" class="btn btn-primary" value = "Search" id="search-button">
-        </input>
+          </input>
+         </div>
+         <div class="col-2">
+           <button type="button" class="btn btn-primary" id="current-button" >
+            Current 
+            </button>
+         </div>
         </div>
-        <div class="col-4">
-          <button type="button" class="btn btn-primary" id="current-button" >
-            Current city
-          </button>
-        </div>
-      </form>
-               </div>
+          </form>
       <div class="row">
         <div class="col-3"></div>
         <div class="col-3">
@@ -136,8 +136,11 @@
       </div>
       <br/>
       <a href="https://affectionate-williams-6bde82.netlify.app/"></a>
-      <a href="https://github.com/Lucia-Madero/Weather-App">Open-source code</a> by Lucía Madero Aguado
     </div>
+  </div>
+  <small>      
+    <a href="https://github.com/Lucia-Madero/Weather-App" target="_blank">Open-source code</a> by Lucía Madero Aguado
+  </small>
     <script src="src/index.js"></script>
   </body>
 </html>
